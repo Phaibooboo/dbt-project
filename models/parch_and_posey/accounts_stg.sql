@@ -1,5 +1,4 @@
-with accounts as (select id, name
-                  from accounts)
+{{ config(materialized='view') }}
 
-select *
-from accounts
+SELECT id, name
+FROM accounts

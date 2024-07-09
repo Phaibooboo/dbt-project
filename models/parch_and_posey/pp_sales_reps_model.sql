@@ -1,7 +1,9 @@
-with sales_reps as (select *
-                  from sales_reps)
+{{ config(materialized='view') }}
 
+WITH sales_reps AS (
+                    SELECT *
+                    FROM sales_reps
+                    )
 
-
-select *
-from sales_reps
+SELECT *
+FROM sales_reps

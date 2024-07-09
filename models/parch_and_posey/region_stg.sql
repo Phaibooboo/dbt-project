@@ -1,7 +1,9 @@
-with region as (select *
-                  from region)
+{{ config(materialized='view') }}
 
+WITH region AS (
+                SELECT *
+                FROM region
+                )
 
-
-select *
-from region
+SELECT *
+FROM region
